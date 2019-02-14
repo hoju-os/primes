@@ -10,8 +10,6 @@ public class PrimeTest {
         int s = (a.length) / numThreads;
         int n = a.length;
 
-        System.out.println("This is n" + n);
-
         PrimeThread threads[] = new PrimeThread[numThreads];
 
         int init = -1, end = 1;
