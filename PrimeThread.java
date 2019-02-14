@@ -2,6 +2,7 @@ public class PrimeThread extends Thread {
     private int end, init;
     int [] v1;
     String name;
+    String  primeNumbers = "";
 
     public PrimeThread(String name, int [] v1, int init, int end){
         setName(name);
@@ -13,7 +14,7 @@ public class PrimeThread extends Thread {
     public void run(){
         System.out.println(Thread.currentThread().getName() + " [" + init + "," + end + "] started!");
         int num = 0;
-        String  primeNumbers = "";
+
 
         /*
             The variable 'i' is the number being tested
@@ -37,8 +38,12 @@ public class PrimeThread extends Thread {
                 primeNumbers = primeNumbers + i + " ";
             }
         }
-        System.out.println("Prime numbers from " + init + " to " + end + " are :");
-        System.out.println(primeNumbers);
+        //System.out.println("Prime numbers from " + init + " to " + end + " are :");
+        //System.out.println(primeNumbers);
+
     }
 
+    public String getPrime(){
+        return primeNumbers;
+    }
 }
