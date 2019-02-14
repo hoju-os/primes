@@ -12,17 +12,16 @@ public class PrimeThread extends Thread {
 
     public void run(){
         System.out.println(Thread.currentThread().getName() + " [" + init + "," + end + "] started!");
-        int num =0;
+        int num = 0;
         String  primeNumbers = "";
 
         /*
             The variable 'i' is the number being tested
          */
 
-        for (int i = 1; i <= end; i++)
+        for (int i = init; i <= end; i++)
         {
             /* The 'counter' variable counts the number of factors.
-               If the number being tested has MORE THAN 2 FACTORS
                that number can not be a PRIME NUMBER.
              */
             int counter=0;                  //counter must be initialized to zero for each new dividend.
