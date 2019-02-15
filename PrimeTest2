@@ -29,10 +29,16 @@ public class PrimeTest {
 
 
         for(int i = 0; i < numThreads; i++) {
-            System.out.println(threads[i].getInit() + threads[i].getEnd() + threads[i].getThreadName());
+
             threads[i].join();
 
             result += threads[i].getPrime();
+        }
+
+        System.out.println();
+
+        for(int i = 0; i < numThreads; i++){
+            System.out.println(threads[i].getName() + "[" + threads[i].getInit() + "," + threads[i].getEnd() + "]");
         }
 
         System.out.println("Total number of prime numbers found = " + PrimeThread.getPrime());
